@@ -1,0 +1,15 @@
+{
+    "server": {
+        "proxy": 8000,
+        "recipes": 8080,
+        "storage": 8002,
+        "user": 8081,
+        "jwt_key": "bambus"
+    },
+    "db": {
+        "username": "borce_ss",
+        "password": "boro!759",
+        "host": "cluster0.vw2pn.mongodb.net",
+        "dbname": "babyfood"
+    }
+}
