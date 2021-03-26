@@ -1,0 +1,59 @@
+.recipe-card-footer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;   
+    padding: 10px 25px;
+    color: var(--midgrey);
+    font-family: Roboto Slab;
+    font-weight: var(--font-weight-bold);
+    font-size: 12px;
+    
+}
+.arrow-button{
+    margin-left: auto;
+}
+.arrow-icon{
+    background: var(--green);
+    border-radius: 4px;
+    height: 28px;
+    width: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.arrow-icon:hover{
+    cursor: pointer;
+}
+.time-icon{
+    display: inline-block;
+    padding-top: 2px;
+    margin-right: 5px;
+}
+.prep-time{
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+.plate-icon{
+    display: inline-block;
+    padding-top: 2px;
+    margin-right: 5px;
+}
+.num-person{
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+.star-icon{
+    display: inline-block;
+    padding-top: 2px;
+    margin-right: 5px;
+}
+.star-icon:hover{
+   cursor: pointer;
+}
+.star-rating{
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}

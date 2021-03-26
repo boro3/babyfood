@@ -2,12 +2,10 @@ const { Validator } = require('node-input-validator');
 
 const recipeSchema = {
     title: 'required|minLength:3',
-    category: 'required|minLength:4',
-    prepTime: 'required|minLength:1',
+    category: 'required',
+    prep_time: 'required',
     description: 'required|minLength:5',
-    recipe: 'required|minLength:10',
-    numPeople: 'required',
-    image:'required'
+    num_person: 'required'
 };
 
 const validate = async (data, schema) => {

@@ -7,6 +7,7 @@ const User = mongoose.model(
         last_name: String,
         email: String,
         password: String,
+        repeat_password: String,
         dob: Date,
         image: String,
         _created: Date,
@@ -21,12 +22,15 @@ const getAll = async () => {
 };
 
 const getOne = async (id) => {
-    let data = await User.findOne({_id: id});
+    let data = await User.findOne(
+        { _id: id, _deleted: false },
+        { _id: 0, password: 0, repeat_password: 0, _created: 0, _deleted: 0 }
+    );
     return data;
 };
 
 const getOneByEmail = async (email) => {
-    let data = await User.findOne({ email });
+    let data = await User.findOne({ email:email, _deleted:false });
     return data;
 };
 
@@ -37,7 +41,7 @@ const save = async (userData) => {
 };
 
 const update = async (id, userData) => {
-    let data = await User.updateOne({_id: id}, userData);
+    let data = await User.updateOne({ _id: id }, userData);
     return data.nModified !== 0;
 };
 
@@ -47,7 +51,7 @@ const updatePartial = async (id, userData) => {
 };
 
 const remove = async (id) => {
-    let data = await User.updateOne({ _id: id }, {_deleted: true});
+    let data = await User.updateOne({ _id: id }, { _deleted: true });
     return data.nModified !== 0;
 };
 

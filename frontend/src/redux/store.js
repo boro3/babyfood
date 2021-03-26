@@ -1,7 +1,9 @@
 // vendor imports
 import { applyMiddleware, createStore } from 'redux';
 import { createLogger } from 'redux-logger';
+import thunk from 'redux-thunk';
 // reducers
-import reducers from './ducks';
+import combine from './ducks';
 
-export default createStore(reducers, applyMiddleware(createLogger()));
+const middleware = applyMiddleware(thunk,createLogger());
+export default createStore(combine, middleware);

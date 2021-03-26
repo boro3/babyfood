@@ -3,7 +3,6 @@ const strings = require('../../../pkg/strings');
 
 
 const storeRecipeFile = async (req, res) => {
-    console.log(req.files);
 
     let allowedTypes = [
         'image/jpeg',
@@ -23,11 +22,12 @@ const storeRecipeFile = async (req, res) => {
     }
 
     //check if user directory exusts if not create
-    let recipeDir = `${__dirname}/../uploads/recipes`;
+    let recipeDir = `${__dirname}/../../../uploads/recipes`;
+
     if (!fs.existsSync(recipeDir)) {
         fs.mkdirSync(recipeDir);
     }
-
+    
     let fileName = `${strings.makeID(8)}_${req.files.document.name.replace(/ /g, '_')}`
     let filePath = `${recipeDir}/${fileName}`;
 
@@ -38,7 +38,7 @@ const storeRecipeFile = async (req, res) => {
         res.status(500).send('Internal Server Error');
     }
 
-    res.status(200).send(fileName);
+    res.status(201).send(fileName);
 };
 
 const storeProfileFile = async (req, res) => {
@@ -62,7 +62,7 @@ const storeProfileFile = async (req, res) => {
     }
 
     //check if user directory exusts if not create
-    let avatarDir = `${__dirname}/../uploads/avatars`;
+    let avatarDir = `${__dirname}/../../../uploads/avatars`;
     if (!fs.existsSync(avatarDir)) {
         fs.mkdirSync(avatarDir);
     }
@@ -83,7 +83,7 @@ const storeProfileFile = async (req, res) => {
 
 
 const getRecipeFile = (req, res) => {
-    let recipeDir = `${__dirname}/../uploads/recipes`
+    let recipeDir = `${__dirname}/../../../uploads/recipes`
     let fileName = req.params.fid;
     let filePath = `${recipeDir}/${fileName}`;
     
@@ -94,7 +94,7 @@ const getRecipeFile = (req, res) => {
 };
 
 const getProfileFile = (req, res) => {
-    let avatarDir = `${__dirname}/../uploads/avatars`
+    let avatarDir = `${__dirname}/../../../uploads/avatars`
     let fileName = req.params.fid;
     let filePath = `${avatarDir}/${fileName}`;
     

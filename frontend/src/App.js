@@ -1,20 +1,32 @@
-import './App.css';
-import HomePage from './components/pages/HomePage';
-import CreateRecipe from './components/pages/CreateRecipe';
-import ProfilePage from './components/pages/ProfilePage';
-import MyRecipes from './components/pages/MyRecipes';
+import React from 'react';
 
-import { Route } from 'react-router-dom';
+import Header from './components/Header/Header';
+import HomePage from './pages/HomePage/HomePage';
+import LoginPage from './pages/LoginPage/LoginPage';
+import CreateUserPage from './pages/CreateUserPage/CreateUserPage';
+import ProfilePage from './pages/ProfilePage/ProfilePage';
+import NewRecipePage from './pages/NewRecipePage/NewRecipePage';
 
+import './assets/styles/theme.css';
+import './assets/styles/global.css';
+
+import { Route, Switch } from 'react-router-dom';
+
+
+// import CreateUserForm from './pages/
 
 function App() {
   return (
     <>
-    <Route exact path={"/"} component={HomePage} />
-    <Route exact path={"/addrecipe"} component={CreateRecipe} />
-    <Route exact path={"/profile"} component={ProfilePage} />
-    <Route exact path={"/myrecipes"} component={MyRecipes} />
-  </>
+      <Header />     
+      <Switch>
+        <Route exact path={"/"} component={HomePage} />
+        <Route exact path={"/login"} component={LoginPage} />
+        <Route exact path={"/singup"} component={CreateUserPage} />
+        <Route exact path={"/myprofile"} component={ProfilePage} />
+        <Route exact path={"/recipes/create"} component={NewRecipePage} />
+      </Switch>
+    </>
   );
 }
 

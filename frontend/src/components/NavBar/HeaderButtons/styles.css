@@ -1,0 +1,7 @@
+.header-buttons-group-span{
+    color:var(--orange);
+    font-family: Roboto;
+    font-size: var(--font-size-large);
+    margin:0 17px;
+    font-weight: var(--font-weight-bold);
+}

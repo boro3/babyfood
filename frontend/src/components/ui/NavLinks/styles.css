@@ -1,0 +1,33 @@
+.header-link{
+    text-decoration: none;
+    font-family: Roboto;
+    font-weight: var(--font-weight-bold);
+    text-transform: uppercase;
+    transition: 0.4s all;
+    display: inline-block;
+    color: var(--midgrey);
+    font-size: var(--font-size-medium);
+}
+.header-link:hover{
+    cursor: pointer;
+}
+.nav{
+    color: var(--orange);
+    pointer-events: none; 
+}
+.user{
+    pointer-events: none; 
+}
+.middle-links:hover{
+    color: var(--orange);
+}
+.user-links:nth-child(1){
+    color: var(--green);
+}
+.user-links:nth-child(3){
+    color: var(--orange);
+}
+.user-links{
+    border-bottom: 2px solid var(--midgrey);
+}
+

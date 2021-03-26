@@ -1,0 +1,11 @@
+.recipe-view{
+    width: 100%;
+}
+.recipe-view-separator{
+    display:flex;
+    margin-bottom: 43px;
+}
+.recipe-card-collection{
+    display: flex;
+    flex-wrap: wrap;
+}

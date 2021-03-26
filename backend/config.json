@@ -1,8 +1,8 @@
 {
     "server": {
         "proxy": 8000,
-        "recipes": 8080,
-        "storage": 8002,
+        "recipes": 8082,
+        "storage": 8080,
         "user": 8081,
         "jwt_key": "bambus"
     },

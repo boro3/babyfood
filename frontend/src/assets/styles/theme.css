@@ -1,0 +1,36 @@
+:root {
+    /* font */
+    --font-family-roboto: Roboto;
+    --font-family-roboto-slab: Roboto Slab;
+    --unnamed-font-style-normal: normal;
+    --font-weight-bold: bold;
+    --font-weight-normal: normal;
+    --font-size-small: 14px;
+    --font-size-medium: 18px;
+    --font-size-large: 16px;
+    --font-size-xlarge: 20px;
+    --font-character-spacing-0: 0px;
+    --font-line-spacing-19: 19px;
+    --font-line-spacing-24: 24px;
+    --font-line-spacing-26: 26px;
+    --font-line-spacing-48: 48px;
+    
+
+    /* inputs */
+    --input-text-border-radius: 3px;
+    --input-text-border: 1px solid #89A1AD;
+
+    /* buttons */
+    --button-primary-color:  #96BB36;
+    --button-delete-color:  red;
+    
+    /* Colors: */
+    --lightgrey: #D8D8D8;
+    --white: #FFFFFF;
+    --softwhite: #F8F7F2;
+    --orange: #F0972A;
+    --midgrey: #A5A5A5;
+    --darkgrey: #626262;
+    --green: #96BB36;
+}
+

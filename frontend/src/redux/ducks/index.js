@@ -1,8 +1,10 @@
 // vendor imports
 import { combineReducers } from 'redux';
 // reducers
-// import cases from './cases.js'; - example
+import authReducer from './auth';
+import casesReducer from './cases';
 
 export default combineReducers({
-    // cases
+    authReducer,
+    casesReducer
 });

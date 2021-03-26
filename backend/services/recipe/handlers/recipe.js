@@ -2,27 +2,25 @@ const recipeModel = require('../../../pkg/recipe');
 const recipeValidator = require('../../../pkg/recipe/validation');
 
 const create = async (req, res) => {
-    // validate user data
     try {
         await recipeValidator.validate(req.body, recipeValidator.recipeSchema);
     } catch (err) {
         console.log(err);
-        return res.status(400).send('Bad Request');
+        return res.status(400).send('Invalid data');
     }
-    // check if user already exists in db
     try {
         let r = await recipeModel.getOneByTitle(req.body.title);
         if (r) {
-            return res.status(409).send('Conflict');
+            return res.status(409).send('Already exist');
         }
     } catch (err) {
         console.log(err);
         return res.status(500).send('Internal Server Error');
     }
-    // set defaults
     req.body.uid = req.user.uid;
     req.body._created = new Date();
     req.body._deleted = false;
+    req.body.stars = 0;
     // save user
     try {
         let recipe = await recipeModel.save(req.body);

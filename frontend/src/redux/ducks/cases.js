@@ -1,11 +1,12 @@
-// initial state
-// ...
+const init = {
+    lala: "lalala"
+};
 
-// constants
-// ...
+const casesReducer = (state = init, action) => {
+    switch (action.type) {
+        default:
+            return state;
+    };
+};
 
-// actions
-// ...
-
-// reducer
-// ...
+export default casesReducer; 

@@ -1,0 +1,32 @@
+.create-user-form{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+.create-user-form-input-row{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.create-user-form-input-row-element{
+    width: 294px;
+    margin: 0 auto;
+   
+}
+.submit-form-btn{
+    margin: 0 auto;
+}
+.profile-form-button{
+    margin: 0 auto;
+    padding-left: 15px;
+}
+.create-user-form-right-column{
+    width: 294px;    
+}
+.create-user-form button{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}

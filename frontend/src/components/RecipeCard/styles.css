@@ -1,0 +1,61 @@
+.recipe-card{
+    height: 428px;
+    max-width: 373px;
+    min-width: 373px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--white);
+    border-radius:6px;
+    overflow: hidden; 
+    border: 1px solid var(--lightgrey);
+    box-shadow: 0px 10px 20px #00000012;
+    margin: 10px auto 56px auto;
+}
+.card-img{
+    height: 234px;
+    width: 100%;
+    position: relative;    
+}
+.card-sticker{
+    font-family: Roboto Slab;
+    font-weight: var(--font-weight-bold);
+    font-size:var(--font-size-small);
+    position: absolute;
+    display: inline;
+    top: 20px;
+    left:36px;
+    text-transform: lowercase;
+    color:var(--white);
+    background: var(--green);
+    padding: 3px 11px;
+    border-radius: 25px;
+    line-height: 19px;
+}
+.card-img img{
+    height: 100%;
+    width: 100%;
+}
+.card-content{
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 25px;
+}
+.card-content h4{
+    font-family: Roboto Slab;
+    font-size: var(--font-size-xlarge);
+    color: var(--orange);
+    text-align: left;
+    margin-bottom: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.card-content p{
+    font-family: Roboto;
+    line-height: 19px;
+    font-size: var(--font-size-small);
+    color: var(--midgrey);
+    text-align: left;
+    height: 4.9rem;
+    overflow:hidden;
+}

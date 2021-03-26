@@ -5,8 +5,9 @@ const Recipe = mongoose.model(
     {
         title: String,
         category: String,
-        prepTime: String,
-        numPeople: Number,
+        prep_time: String,
+        num_person: String,
+        stars:Number,
         description: String,
         recipe: String,
         uid: String,

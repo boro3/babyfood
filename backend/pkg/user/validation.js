@@ -1,8 +1,8 @@
 const { Validator } = require('node-input-validator');
 
 const registrationSchema = {
-    first_name: 'required|minLength:3',
-    last_name: 'required|minLength:4',
+    first_name: 'required',
+    last_name: 'required',
     email: 'required|email',
     password: 'required',
     dob: 'required'

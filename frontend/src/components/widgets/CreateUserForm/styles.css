@@ -1,0 +1,23 @@
+.create-user-form{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+.create-user-form-input-row{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.create-user-form-input-row-element{
+    width: 294px;
+    margin: 0 auto;
+    margin-left: 0;
+}
+.create-user-form-right-column{
+    width: 294px;
+}
+.create-user-form button{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}

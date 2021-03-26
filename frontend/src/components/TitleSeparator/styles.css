@@ -1,0 +1,14 @@
+.separator-title{
+    font-family: Roboto Slab;
+    font-weight: bolder;
+    font-size: 36px;
+    color: var(--green);
+    text-transform: capitalize;
+    white-space:nowrap;
+    margin-right:10px;
+   }
+   .separator-line{
+       width: 100%;
+       border-bottom: 1px solid var(--lightgrey);
+       display: inline-block;
+   }

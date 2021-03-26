@@ -1,0 +1,25 @@
+.login-text-container{
+    display: inline-block;
+    width: 54%;
+}
+.login-components-container{
+    padding-top: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.login-text{
+    font-size: 20px;
+    font-family: Roboto Slab;
+    color:var(--midgrey);
+}
+.login-text-title{
+    color: var(--orange);
+    font-size: 46px;
+    font-family: Roboto Slab;
+    margin-bottom: 25px;
+    font-weight: bold;
+}
+.login-text-title span{
+    color: var(--darkgrey);
+}
