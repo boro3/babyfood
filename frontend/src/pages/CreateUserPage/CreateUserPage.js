@@ -7,7 +7,7 @@ import './styles.css';
 
 const CreateUserPage = () => {
     return (
-        <div className="create-user-page container">
+        <div className="create-user-page container main-container">
             <TitleSeparator headTitle='Create account' />
             <div className="create-user-container">
                 <div className='create-user-text'>

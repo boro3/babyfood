@@ -4,8 +4,9 @@ import {
     PATCH_USER,
     POST_PROFILE_IMG,
     POST_RECIPE_IMG,
-    POST_NEW_RECIPE
-} from './../constants/endpoins'
+    POST_NEW_RECIPE,
+    GET_SINGLE_RECIPE
+} from './../constants/endpoins';
 
 export const createUserReq = async (values) => {
     let response = await fetch(POST_NEW_USER,
@@ -83,6 +84,7 @@ export const updateUserReq = async (id, jwt, payload) => {
         return true;
     }
 };
+
 export const uploadUserPictureReq = async (image, jwt) => {
     let response = await fetch(POST_PROFILE_IMG,
         {
@@ -100,6 +102,7 @@ export const uploadUserPictureReq = async (image, jwt) => {
         return response.text();
     }
 };
+
 export const uploadRecipePictureReq = async (image, jwt) => {
     let response = await fetch(POST_RECIPE_IMG,
         {
@@ -138,4 +141,60 @@ export const createRecipeReq = async (jwt, payload) => {
     }
 };
 
+export const fetchSingleReciple = async (jwt, id) => {
+    let response = await fetch(`${GET_SINGLE_RECIPE}${id}`,
+        {
+            method: 'GET',
+            headers: {
+                'Accept': 'application/json',
+                'Content-type': 'application/json',
+                'Authorization': `Bearer ${jwt}`
+            }
+        }
+    );
+    if (!response.ok) {
+        let text = await response.text();
+        throw new Error(text);
+    } else {
+        return response.json();
+    }
+};
 
+
+export const updateRecipeReq = async (id, jwt, payload) => {
+    let response = await fetch(`${GET_SINGLE_RECIPE}${id}`,
+        {
+            method: 'PATCH',
+            headers: {
+                'Accept': 'application/json',
+                'Content-type': 'application/json',
+                'Authorization': `Bearer ${jwt}`
+            },
+            body: JSON.stringify(payload)
+        }
+    );
+    if (!response.ok) {
+        let text = await response.text();
+        throw new Error(text);
+    } else {
+        return true;
+    }
+};
+export const deleteRecipeReq = async (id, jwt) => {
+    let response = await fetch(`${GET_SINGLE_RECIPE}${id}`,
+        {
+            method: 'DELETE',
+            headers: {
+                'Accept': 'application/json',
+                'Content-type': 'application/json',
+                'Authorization': `Bearer ${jwt}`
+            }
+        }
+    );
+    if (!response.ok) {
+        let text = await response.text();
+        throw new Error(text);
+    } else {
+        return true;
+    }
+};

@@ -67,7 +67,7 @@ const ProfilePage = () => {
     };
 
     return (
-        <div className="profile-page container">
+        <div className="profile-page container main-container">
             <TitleSeparator headTitle='My profile' />
 
             <div className="profile-page-content">

@@ -1,0 +1,103 @@
+.modal-content{
+    margin: 0 auto;
+    width: 70%;
+    position: relative;
+    opacity: 100%;
+    z-index: 5;
+    background: white;
+    padding: 10px;
+}
+.modal-content-container{
+    display: flex;
+}
+.modal-description-header{
+    font-weight: bold;
+    font-family: Roboto Slab;
+    font-size:18px;
+    text-align: left;
+    color: var(--green);
+    margin-top: 15px;
+}
+.modal-sticker{
+    font-family: Roboto Slab;
+    font-weight: var(--font-weight-bold);
+    font-size:var(--font-size-small);
+    display: block;
+    text-align: center;
+    top: 20px;
+    left:36px;
+    width: 80px;
+    text-transform: uppercase;
+    color:var(--white);
+    background: var(--green);
+    padding: 3px 11px;
+    border-radius: 5px;
+    line-height: 19px;
+    margin-right: 125px;
+    margin-left: 20px;
+    float: right;
+}
+.single-icon{
+    margin: 0 15px;
+    font-family: Roboto Slab;
+    font-weight: bold;
+    font-size: 12px;
+    color:var(--darkgray);
+}
+.modal-recipe{
+    width: 100%;
+    margin: 0 25px;
+    color:var(--midgrey);
+    font-family: Roboto;
+    font-size: 16px;
+}
+.modal-right-columnt h4{
+    margin: 10px 0 15px  25px;
+    color:var(--green);
+    font-family: Roboto Slab;
+    font-size: 18px;
+}
+.modal-decription{
+    padding-top:20px;
+    font-size:16px;
+    font-family: Roboto;
+    color:var(--midgrey);
+    font-weight: normal;
+    min-height: 126px;
+}
+.modal-close-btn{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+.modal-close-btn:hover{
+    cursor: pointer;
+}
+.modal-title{
+    width: 100%;
+    margin-bottom: 30px;
+    font-size: 36px;
+    font-family: Roboto Slab;
+    font-weight: bold;
+    color:var(--orange);
+}
+.modal-image{
+    height: 243px;
+    width: 412px;
+}
+.modal-image img{
+    height: 100%;
+    width: 100%;
+}
+.modal-window {
+    position: fixed; 
+    z-index: 1; 
+    padding-top: 100px; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background: var(--softwhite) 0% 0% no-repeat padding-box;
+    opacity: 90%; 
+  }

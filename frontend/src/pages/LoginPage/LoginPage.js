@@ -7,7 +7,7 @@ import './styles.css';
 
 const LoginPage = () => {
     return (
-        <div className="login-page container">
+        <div className="login-page container main-container">
             <TitleSeparator headTitle='log in' />
             <div className="login-components-container">
                 <div className="login-text-container">

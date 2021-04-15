@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 
 import { updateUserSchema } from '../../../resources/constants/formValidationSchemas';
 import { updateUserReq } from './../../../resources/apiReq/ApiReq';
-import { formatDate, compareStateUpdate } from './../../../services/functions/functions'
+import { formatDate, compareStateUpdate } from './../../../services/functions/functions';
 
 import Input from '../../ui/Input/Input';
 import Button from '../../ui/Button/Button';
@@ -17,12 +17,12 @@ const CreateUserForm = (props) => {
     const user = useSelector(state => state.authReducer.user);
 
     const handleSubmit = async (values) => {
-        let a = compareStateUpdate(values, props.userData);
+        let newUserData = compareStateUpdate(values, props.userData);
         if (props.image.uploadImage) {
-            a.image = props.image.image;
+            newUserData.image = props.image.image;
         }
         try {
-            let data = await updateUserReq(user.uid, user.jwt, a);
+            let data = await updateUserReq(user.uid, user.jwt, newUserData);
             if (data) {
                 alert("Saved");
             }

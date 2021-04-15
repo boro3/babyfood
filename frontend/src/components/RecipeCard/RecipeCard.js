@@ -1,12 +1,13 @@
 import React from 'react';
 
-import { GET_RECIPE_IMG } from './../../resources/constants/endpoins'
+import { GET_RECIPE_IMG } from './../../resources/constants/endpoins';
 
-import RecipeCardFooter from './RecipeCardFooter/RecipeCardFooter'
+import RecipeCardFooter from './RecipeCardFooter/RecipeCardFooter';
 
 import "./styles.css";
 
 const RecipeCard = (props) => {
+
     return (
         <div className="recipe-card">
             <div className="card-img">

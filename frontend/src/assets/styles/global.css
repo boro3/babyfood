@@ -19,8 +19,11 @@ html, body, #root {
     max-width: 1260px;
     height: 100%;
     margin: 0 auto;
+    margin-bottom: 20px;
 }
-
+.main-container{
+    min-height: 50vh;
+}
 .orange-dot{
     height: 9px;
     width: 9px;

@@ -21,26 +21,6 @@ export const logoutUser = () => {
     };
 };
 
-// export const fetchUserRequest = (userAuth) => {
-//     return dispatch => {
-//         fetch(`http://localhost:8081/api/v1/user/${userAuth.uid}`,
-//             {
-//                 method: 'GET',
-//                 headers: {
-//                     'Authorization': `Bearer ${userAuth.jwt}`,
-//                     'Accept': 'application/json',
-//                     'Content-type': 'application/json'
-//                 }
-//             }
-//         )
-//             .then(res => res.json())
-//             .then(data => {
-//                 dispatch(fetchUserSuccess(data))
-//             })
-//             .catch(err => { dispatch(fetchUserFail(err)) })
-//     }
-// };
-
 const authReducer = (state = init, action) => {
     switch (action.type) {
         case LOGIN_USER:

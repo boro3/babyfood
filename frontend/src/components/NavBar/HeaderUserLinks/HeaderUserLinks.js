@@ -6,7 +6,7 @@ import "./styles.css"
 const HeaderUserLinks = () => {
     return (
         <div className="header-nav-links">            
-            <NavLinks label={'my recipe'} path={"/myrecipe"} type="user" active={"user"}/>
+            <NavLinks label={'my recipe'} path={"/myrecipes"} type="user" active={"user"}/>
             <span className="black-dot"></span>    
             <NavLinks label={'my profile'} path={"/myprofile"} type="user" active={"user"}/>                 
             <span className="black-dot"></span>

@@ -28,9 +28,14 @@ api.use(function (err, req, res, next) {
 });
 
 api.post('/api/v1/recipe/create', recipe.create);
+api.get('/api/v1/recipe/add/:id', recipe.starAdd);
 api.get('/api/v1/user/recipes', recipe.getByUid);
 api.get('/api/v1/recipe/all', recipe.getAll);
+api.get('/api/v1/recipe/new', recipe.getNew);
+api.get('/api/v1/recipe', recipe.getByCategory);
 api.get('/api/v1/recipe/:id', recipe.getOne);
+api.patch('/api/v1/recipe/:id', recipe.patch);
+api.delete('/api/v1/recipe/:id', recipe.remove);
 
 api.listen(cfg.get('server').recipes, err => {
     if(err) {

@@ -1,0 +1,17 @@
+.head-btn-back{
+position: absolute;
+right: -50px;
+top: 24px;
+height: 41px;
+width: 41px;
+background: var(--orange);
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.title-separator-container{
+    width: 95%;
+    display: inline-block;
+    position: relative;
+}
